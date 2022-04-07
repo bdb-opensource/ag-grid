@@ -7,21 +7,31 @@
     "@angular/common": ">= 8.0.0",
     "@angular/core": ">= 8.0.0"
   },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/ag-grid/ag-grid.git"
   },
-  "main": "bundles/ag-grid-community-angular.umd.js",
-  "module": "fesm5/ag-grid-community-angular.js",
-  "es2015": "fesm2015/ag-grid-community-angular.js",
-  "esm5": "esm5/ag-grid-community-angular.js",
-  "esm2015": "esm2015/ag-grid-community-angular.js",
-  "fesm5": "fesm5/ag-grid-community-angular.js",
-  "fesm2015": "fesm2015/ag-grid-community-angular.js",
+  "module": "fesm2015/ag-grid-community-angular.mjs",
+  "es2020": "fesm2020/ag-grid-community-angular.mjs",
+  "esm2020": "esm2020/ag-grid-community-angular.mjs",
+  "fesm2020": "fesm2020/ag-grid-community-angular.mjs",
+  "fesm2015": "fesm2015/ag-grid-community-angular.mjs",
   "typings": "ag-grid-community-angular.d.ts",
-  "metadata": "ag-grid-community-angular.metadata.json",
-  "sideEffects": false,
-  "dependencies": {
-    "tslib": "^1.10.0"
-  }
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./ag-grid-community-angular.d.ts",
+      "esm2020": "./esm2020/ag-grid-community-angular.mjs",
+      "es2020": "./fesm2020/ag-grid-community-angular.mjs",
+      "es2015": "./fesm2015/ag-grid-community-angular.mjs",
+      "node": "./fesm2015/ag-grid-community-angular.mjs",
+      "default": "./fesm2020/ag-grid-community-angular.mjs"
+    }
+  },
+  "sideEffects": false
 }
