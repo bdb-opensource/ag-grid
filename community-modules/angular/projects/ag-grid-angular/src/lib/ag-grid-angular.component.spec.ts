@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { AgGridAngular } from './ag-grid-angular.component';
 
@@ -6,7 +6,7 @@ describe('MyLibComponent', () => {
   let component: AgGridAngular;
   let fixture: ComponentFixture<AgGridAngular>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ AgGridAngular ]
     })
